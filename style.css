@@ -1,0 +1,202 @@
+* {
+  /* outline: red 1px solid; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Distance from the Sun to planets in astronomical units (au) */
+  --au: 50px;
+  --earthYear: 5s;
+}
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("./stars.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.cercle {
+  position: absolute;
+  max-height: 4px;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.sun {
+  background-color: yellow;
+}
+.mercury {
+  height: 8px;
+  background-color: peru;
+  animation-name: mercuryRotation;
+  animation-duration: calc(0.241 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.venus {
+  height: 8px;
+  background-color: burlywood;
+  animation-name: venusRotation;
+  animation-duration: calc(0.6164 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.earth {
+  background-color: blue;
+  animation-name: earthRotation;
+  animation-duration: var(--earthYear);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.moon {
+  height: 2px;
+  background-color: lightgray;
+  animation-name: moonRotation;
+  animation-duration: calc(0.083333 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.mars {
+  height: 8px;
+  background-color: red;
+  animation-name: marsRotation;
+  animation-duration: calc(1.857 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.jupiter {
+  height: 8px;
+  background-color: rgb(208, 190, 159);
+  animation-name: jupiterRotation;
+  animation-duration: calc(11.87 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.saturn {
+  height: 8px;
+  background-color: rgb(208, 190, 159);
+  animation-name: saturnRotation;
+  animation-duration: calc(29.47 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.uranus {
+  height: 8px;
+  background-color: rgb(208, 190, 159);
+  animation-name: uranusRotation;
+  animation-duration: calc(84.07 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.neptune {
+  height: 8px;
+  background-color: rgb(208, 190, 159);
+  animation-name: neptuneRotation;
+  animation-duration: calc(164.9 * var(--earthYear));
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/* ------------------------------------------------------------------------------ */
+@keyframes mercuryRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(0.39 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(0.39 * var(--au)))
+      rotateZ(360deg);
+  }
+}
+@keyframes venusRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(0.72 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(0.72 * var(--au)))
+      rotateZ(360deg);
+  }
+}
+@keyframes earthRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(1 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(1 * var(--au))) rotateZ(360deg);
+  }
+}
+@keyframes moonRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(0.1 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(0.1 * var(--au))) rotateZ(360deg);
+  }
+}
+@keyframes marsRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(1.52 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(1.52 * var(--au)))
+      rotateZ(360deg);
+  }
+}
+@keyframes jupiterRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(5.2 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(5.2 * var(--au)))
+      rotateZ(360deg);
+  }
+}
+@keyframes saturnRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(9.54 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(9.54 * var(--au)))
+      rotateZ(360deg);
+  }
+}
+@keyframes uranusRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(19.2 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(19.2 * var(--au)))
+      rotateZ(360deg);
+  }
+}
+@keyframes neptuneRotation {
+  from {
+    transform: rotateZ(0deg) translateX(calc(30.06 * var(--au))) rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg) translateX(calc(30.06 * var(--au)))
+      rotateZ(360deg);
+  }
+}

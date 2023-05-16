@@ -1,0 +1,19 @@
+Distance from the Sun to planets in astronomical units (au):
+Mercury 0.39
+Venus 0.72
+Earth 1
+Mars 1.52
+Jupiter 5.2
+Saturn 9.54
+Uranus 19.2
+Neptune 30.06
+
+How Long is a Year on Other Planets :
+Mercury: 88
+Venus: 225
+Earth: 365
+Mars: 687
+Jupiter: 4,333
+Saturn: 10,759
+Uranus: 30,687
+Neptune: 60,190

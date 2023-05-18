@@ -26,8 +26,8 @@ body::before {
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.6) 80%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.4) 100%
   );
 }
 .cercle {
@@ -152,7 +152,8 @@ body::before {
     transform: rotateZ(0deg) translateX(calc(0.1 * var(--au))) rotateZ(0deg);
   }
   to {
-    transform: rotateZ(-360deg) translateX(calc(0.1 * var(--au))) rotateZ(360deg);
+    transform: rotateZ(-360deg) translateX(calc(0.1 * var(--au)))
+      rotateZ(360deg);
   }
 }
 @keyframes marsRotation {
